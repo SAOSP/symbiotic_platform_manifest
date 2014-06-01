@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="saosp"
-          fetch="git://github.com/SAOSP/" />
+  <remote  name="saosp"
+           fetch="git://github.com/SAOSP/" />
+
+  <remote  name="gh"
+           fetch="git://github.com/" />
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
+           
+
   <default revision="refs/tags/android-4.4.2_r2"
            remote="aosp"
            sync-j="4" />
