@@ -10,8 +10,6 @@
           review="https://android-review.googlesource.com/"
           sync-j="4" />
            
-  <project path="manifest" name="symbiotic/platform/manifest" remote="sym" revision="master" />
-           
   <project path="build" name="platform/build" remote="sym" revision="sym" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
