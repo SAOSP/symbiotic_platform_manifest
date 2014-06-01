@@ -5,14 +5,12 @@
           fetch="git://github.com/SAOSP/"
           remote="sym" />
           
-  <default revision="refs/tags/android-4.4.2_r2"  <remote  name="aosp"
-           fetch=".."
-           review="https://android-review.googlesource.com/" />
-  <default revision="master"
+  <default revision="refs/tags/android-4.4.2_r2"
+           review="https://android-review.googlesource.com/"
            remote="aosp"
            sync-j="4" />
            
-           <project path="manifest" name="SAOSP/symbiotic/platform/manifest" remote="github" revision="master" />
+           <project path="manifest" name="SAOSP/symbiotic/platform/manifest" remote="sym" revision="master" />
            
   <project path="build" name="SAOSP/platform/build" remote="sym" revision="sym" >
     <copyfile src="core/root.mk" dest="Makefile" />
