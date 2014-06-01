@@ -4,15 +4,17 @@
   <remote name="saosp"
           fetch="git://github.com/SAOSP/"
           remote="sym" />
-  
-  <remote  name="aosp"
+          
+  <default revision="refs/tags/android-4.4.2_r2"  <remote  name="aosp"
            fetch=".."
            review="https://android-review.googlesource.com/" />
   <default revision="master"
            remote="aosp"
            sync-j="4" />
-
-  <project path="build" name="platform/build" groups="pdk" >
+           
+           <project path="manifest" name="SAOSP/symbiotic/platform/manifest" remote="github" revision="master" />
+           
+  <project path="build" name="SAOSP/platform/build" remote="sym" revision="sym" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
@@ -345,7 +347,7 @@
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
-  <project path="packages/apps/Settings" name="SAOSP/platform/packages/apps/Settings" remote="sym" revision="sym"/>
+  <project path="packages/apps/Settings" name="SAOSP/platform/packages/apps/Settings" remote="sym" revision="sym" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
